@@ -31,6 +31,8 @@ public class JdbcDemo {
         Connection connection=null;
         Statement statement=null;
         ResultSet rs = null;
+        PreparedStatement preparedStatement = null;
+        CallableStatement callableStatement = null;
 
         try{
             String url = properties.getProperty("jdbc.url");
@@ -38,8 +40,19 @@ public class JdbcDemo {
             String password = properties.getProperty("jdbc.password");
             connection= DriverManager.getConnection(url,username,password);
             String sql = "select * from user where id = 1";
+
             statement=connection.createStatement();
             rs=statement.executeQuery(sql);
+
+            // 预处理
+//            preparedStatement=connection.prepareStatement(sql);
+//            preparedStatement.executeQuery();
+
+            // 存储过程
+//            callableStatement=connection.prepareCall(sql);
+
+
+
             while (rs.next()){
                 System.out.println(rs.getString("username"));
             }
