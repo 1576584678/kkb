@@ -1,7 +1,8 @@
 ## mybatis v1
 1. 添加数据源依赖
+
 `pom.xml`
-···xml
+```xml
 <dependency>
     <groupId>commons-dbcp</groupId>
     <artifactId>commons-dbcp</artifactId>
@@ -9,7 +10,6 @@
 </dependency>
 ```
 2. 配置数据源及获取连接的方法
-
 ```java
 public class JdbcUtil {
     private static final BasicDataSource dataSource= new BasicDataSource();
