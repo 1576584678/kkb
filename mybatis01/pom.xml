@@ -3,11 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.lyl.kkb</groupId>
         <artifactId>mybatis</artifactId>
+        <groupId>org.lyl.kkb</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>jdbcDemo</artifactId>
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mybatis01</artifactId>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+    </dependencies>
 </project>
